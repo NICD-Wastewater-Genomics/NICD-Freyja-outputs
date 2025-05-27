@@ -22,7 +22,7 @@ times_df = times_df.set_index('LabNumber')
 times_df['SampleCollectionDate'] = pd.to_datetime(times_df['SampleCollectionDate'])
 times_df = times_df.loc[~times_df.duplicated(keep='first')]
 
-daysIncluded=180
+daysIncluded=60
 cut_date = pd.to_datetime(times_df['SampleCollectionDate'].max()-datetime.timedelta(days=daysIncluded))
 times_df = times_df[times_df['SampleCollectionDate']>=cut_date]
 
@@ -164,22 +164,29 @@ for j0,dfi in enumerate(df.index):
 df_custom = np.stack( (~df.isna(),df_dates,df_Province,df_AA), axis=-1)
 df2_custom = ~df2.isna()
 
+df.to_feather('mutations_wastewater.feather')
 
-fig = make_subplots(2, 1, vertical_spacing=0.05,subplot_titles=("Mutations in Wastewater", "Definitions of Circulating Lineages"),row_heights=[df.shape[0]/fullLen, (df2.shape[0]-1)/fullLen])
+with open('mutations_wastewater_meta.npy', 'wb') as f:
+    np.save(f, df_custom)
+
+with open('mutations_wastewater_meta.npy', 'rb') as f:
+    df00 = np.load(f,allow_pickle=True)
+
+fig = make_subplots(1, 1, vertical_spacing=0.05,subplot_titles=["Mutations in Wastewater"],row_heights=[df.shape[0]/fullLen])#, (df2.shape[0]-1)/fullLen])
 fig.add_trace(go.Heatmap(z=df,x=df.columns,y=df.index,zmin=0,zmax=1.,colorscale='YlOrRd', customdata = df_custom,
                          colorbar={'title':'SNV Frequency', 'orientation':'h', 'thickness':20, 'y': -0.1,'len':0.4},
                          showscale=True, hovertemplate='<b>Nuc. Mutation:%{x}</b><br><b>AA Mutation:%{customdata[3]}<br><b>Sample:%{y}<br><b>Seq. Covered:%{customdata[0]}<br><b>Frequency:%{z}<br><b>Date:%{customdata[1]}<br><b>Province:%{customdata[2]}',
                          name=""), 1, 1)
-# fig.update_layout(yaxis = dict(scaleanchor = 'x'))
-fig.add_trace(go.Heatmap(z=df2,x=df2.columns,y=df2.index,zmin=0,zmax=1.,colorscale='YlOrRd',showscale=False, customdata = df2_custom,
-                         hovertemplate='<b>Mutation:%{x}</b><br> <b>Lineage:%{y}<br> <b>Present:%{z}',
-                         name=""), 2, 1)
+# # fig.update_layout(yaxis = dict(scaleanchor = 'x'))
+# fig.add_trace(go.Heatmap(z=df2,x=df2.columns,y=df2.index,zmin=0,zmax=1.,colorscale='YlOrRd',showscale=False, customdata = df2_custom,
+#                          hovertemplate='<b>Mutation:%{x}</b><br> <b>Lineage:%{y}<br> <b>Present:%{z}',
+#                          name=""), 2, 1)
 # fig.update_traces(yaxis = dict(scaleanchor = 'x'))
 fig.update_layout(showlegend=False)
 fig.update_xaxes(visible=False)
 fig.update_yaxes(visible=False)
 
-fig['layout']['yaxis2'].update(scaleanchor = 'x')
+# fig['layout']['yaxis2'].update(scaleanchor = 'x')
 # fig.update_coloraxes(colorbar={'orientation':'h', 'thickness':20, 'y': -0.2,'len':0.4})
 fig.write_html("../SNV_heatmap.html")
 

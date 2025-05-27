@@ -88,7 +88,7 @@ agg_df.loc[:, 'linDict'] = processed_linDictMod
 # move everything else to "Other"
 # agg_df.index = [adi.replace('_','-') for adi in agg_df.index]
 
-agg_df.index = [adi.replace('_','-').replace('ENV-','').replace('ENC-','').replace('.tsv','') for adi in agg_df.index]
+agg_df.index = [adi.replace('_','-').replace('ENV-','').replace('NAT-WGS-','').replace('AIR-WGS-','').replace('ENC-','').replace('.tsv','') for adi in agg_df.index]
 agg_df.index  = ['-'.join(adi.split('-')[0:3]) if (adi[0:3]=='NIC' or adi[0:3]=='COV') else '-'.join(adi.split('-')[0:2]) for adi in agg_df.index ]
 
 agg_df = agg_df[['linDict']]
@@ -96,7 +96,7 @@ agg_df = agg_df[['linDict']]
 times_df = pd.read_csv('../sample_metadata.csv', skipinitialspace=True).dropna().reset_index(drop=True)
 times_df['Sequence_ID'] = times_df['Sequence_ID'].apply(lambda x:x.replace('_','-').replace('ENV-','').split('.')[0])
 
-times_df['LabNumber'] = times_df['LabNumber'].apply(lambda x:x.replace('ENV-',''))
+times_df['LabNumber'] = times_df['LabNumber'].apply(lambda x:x.replace('ENV-','').replace('NAT-WGS-','').replace('AIR-WGS-',''))
 times_df = times_df.drop_duplicates()
 dupMeta = times_df.loc[times_df['LabNumber'].duplicated(keep='first'),'LabNumber'].to_list()
 if len(dupMeta)>0:
@@ -184,7 +184,7 @@ df = df_abundances[ordering[::-1]]
 ### group by month. 
 df_ = df.groupby(pd.Grouper(freq='MS')).mean()
 df_.to_csv('NICD_monthly.csv')
-fig,ax = plt.subplots(figsize=(10.5,5))
+fig,ax = plt.subplots(figsize=(12.,5))
 
 for i in range(0, df_.shape[1]):
     ax.bar(df_.index, df_.iloc[:, i],
@@ -211,7 +211,7 @@ plt.savefig('../figures/NICD_stackplot_Monthly.pdf')
 ### group by week. 
 df_ = df.groupby(pd.Grouper(freq='W-SAT')).mean()
 
-fig,ax = plt.subplots(figsize=(10.5,5))
+fig,ax = plt.subplots(figsize=(12,5))
 
 for i in range(0, df_.shape[1]):
     ax.bar(df_.index, df_.iloc[:, i],
@@ -241,7 +241,7 @@ df_ = df_.rolling(windowSize, center=True,min_periods=0).sum()
 df_ = df_.div(df_.sum(axis=1),axis=0)
 df_.to_csv('NICD_daily_smoothed.csv')
 
-fig,ax = plt.subplots(figsize=(10.5,5))
+fig,ax = plt.subplots(figsize=(12,5))
 ax.stackplot(df_.index,df_.T,labels=df_.columns,colors=colors0)
 locator = mdates.MonthLocator(bymonthday=1)
 ax.xaxis.set_major_locator(locator)
