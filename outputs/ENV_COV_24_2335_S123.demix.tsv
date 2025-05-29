@@ -1,6 +1,6 @@
 	../variants/ENV_COV_24_2335_S123.tsv
-summarized	[('LB.1* (LB.1.X)', 0.9999999778949774)]
+summarized	[('LB.1* (LB.1.X)', 0.9999999778945342)]
 lineages	LB.1.3.4
 abundances	0.99999998
-resid	3.3531531900755684
+resid	3.3531531901051466
 coverage	78.06909005785373
