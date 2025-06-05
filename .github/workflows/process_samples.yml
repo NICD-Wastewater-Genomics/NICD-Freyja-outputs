@@ -9,6 +9,7 @@ on:
     
 env:
   BATCH_SIZE: 100 # Paired-read files, so 50 samples per batch
+  GH_TOKEN: ${ secrets.GITHUB_TOKEN }
 
 jobs:
   process_samples:
