@@ -1,6 +1,6 @@
 	../variants/ENV_COV_25_0037_S111.tsv
-summarized	[('Omicron', 0.9999999999696652)]
+summarized	[('Omicron', 0.9999999995835496)]
 lineages	XEL.1 XEL.5
 abundances	0.99920446 0.00079554
-resid	2.1499127397094466
+resid	2.1508153297424393
 coverage	47.3330435073404

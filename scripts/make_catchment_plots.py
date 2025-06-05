@@ -87,7 +87,7 @@ agg_df.loc[:, 'linDict'] = processed_linDictMod
 # move everything else to "Other"
 # agg_df.index = [adi.replace('_','-') for adi in agg_df.index]
 
-agg_df.index = [adi.replace('_','-').replace('ENV-','').replace('ENC-','').replace('.tsv','') for adi in agg_df.index]
+agg_df.index = [adi.replace('_','-').replace('ENV-','').replace('NAT-WGS-','').replace('AIR-WGS-','').replace('ENC-','').replace('.tsv','') for adi in agg_df.index]
 agg_df.index  = ['-'.join(adi.split('-')[0:3]) if (adi[0:3]=='NIC' or adi[0:3]=='COV') else '-'.join(adi.split('-')[0:2]) for adi in agg_df.index ]
 
 agg_df = agg_df[['linDict']]
@@ -95,7 +95,7 @@ agg_df = agg_df[['linDict']]
 times_df = pd.read_csv('../sample_metadata.csv', skipinitialspace=True).dropna().reset_index(drop=True)
 times_df['Sequence_ID'] = times_df['Sequence_ID'].apply(lambda x:x.replace('_','-').replace('ENV-','').split('.')[0])
 
-times_df['LabNumber'] = times_df['LabNumber'].apply(lambda x:x.replace('ENV-',''))
+times_df['LabNumber'] = times_df['LabNumber'].apply(lambda x:x.replace('ENV-','').replace('NAT-WGS-','').replace('AIR-WGS-',''))
 times_df = times_df.drop_duplicates()
 dupMeta = times_df.loc[times_df['LabNumber'].duplicated(keep='first'),'LabNumber'].to_list()
 if len(dupMeta)>0:

@@ -10,7 +10,7 @@ fastq_urls = [url for url in fastq_urls if '.fastq' in url]
 sample_ids = list(set([url.split('/')[-1].split('_R')[0] for url in fastq_urls]))
 print(f'Found {len(sample_ids)} samples in gcloud bucket')
 
-completed_samples = [file.split('.demix.tsv')[0] for file in os.listdir('outputs')]
+completed_samples = [file.split('.covariants.tsv')[0] for file in os.listdir('covariants')]
 print(f'Found {len(completed_samples)} completed samples')
 
 new_samples = [sample for sample in sample_ids if sample not in completed_samples]

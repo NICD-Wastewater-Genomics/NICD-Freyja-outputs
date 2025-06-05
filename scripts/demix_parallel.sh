@@ -2,8 +2,8 @@
 freyja update
 freyja update --outdir . #to ensure files end up in this dir
 
-# collect samples from last 120 days for rerunning
-awk -v dat="$(date -d '120 days ago' '+%Y/%m/%d')" -F ',' '$4 > dat {print $5}' ../sample_metadata.csv > recent_samples.txt
+# collect samples from last 240 days for rerunning
+awk -v dat="$(date -d '240 days ago' '+%Y/%m/%d')" -F ',' '$4 > dat {print $5}' ../sample_metadata.csv > recent_samples.txt
 
 my_func() {
     fn=$1

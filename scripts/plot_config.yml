@@ -1,4 +1,9 @@
 # Configuration file for plotting colors, with inheritance shown with similar colors. 
+BA.3.2.X:
+  name: "BA.3.2.X"
+  members:
+    - "BA.3.2*"
+  color: "#00008B"
 
 LP.8.X:
   name: "LP.8.X"

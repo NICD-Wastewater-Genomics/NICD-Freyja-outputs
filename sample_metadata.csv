@@ -2414,7 +2414,6 @@ Mpumalanga,Ehlanzeni DM,4,2025/01/20,NAT-WGS-25-0054,NAT-WGS-25-0054,Kingstonval
 Western Cape,Cape Town MM,4,2025/01/21,NAT-WGS-25-0055,NAT-WGS-25-0055,Borcherds Quarry Wastewater Treatment Works
 Western Cape,Cape Town MM,4,2025/01/21,NAT-WGS-25-0056,NAT-WGS-25-0056,Zandvleit Wastewater Treatment Works
 Gauteng,Tshwane MM,5,2025/01/22,NAT-WGS-25-0082,NAT-WGS-25-0082,Rooiwal Wastewater Treatment Works
-Limpopo,Vhembe DM,5,2025/01/29,NAT-WGS-25-0083,NAT-WGS-25-0083,Nancefield
 Limpopo,Vhembe DM,5,2025/01/29,NAT-WGS-25-0084,NAT-WGS-25-0084,Musina WWTW (in town)
 Gauteng,Tshwane MM,5,2025/01/31,NAT-WGS-25-0085,NAT-WGS-25-0085,Daspoort Wastewater Treatment Works
 Northern Cape,Frances Baard DM,5,2025/01/30,NAT-WGS-25-0086,NAT-WGS-25-0086,Homevale Kimberley
@@ -2449,3 +2448,67 @@ Limpopo,Vhembe DM,3,2025/01/14,NAT-WGS-25-0028,NAT-WGS-25-0028,Nancefield
 Gauteng,Johannesburg MM,3,2025/01/15,NAT-WGS-25-0030,NAT-WGS-25-0030,Goudkoppies Wastewater Treatment Works
 Gauteng,Ekurhuleni MM,3,2025/01/16,NAT-WGS-25-0031,NAT-WGS-25-0031,Olifantsfontein
 Gauteng,Tshwane MM,3,2025/01/17,NAT-WGS-25-0032,NAT-WGS-25-0032,Daspoort Wastewater Treatment Works
+Gauteng,Ekurhuleni MM,5,2025/01/29,AIR-WGS-25-0010,AIR-WGS-25-0010,Other
+Gauteng,Ekurhuleni MM,6,2025/02/03,NAT-WGS-25-0089,NAT-WGS-25-0089,Olifantsfontein
+Gauteng,Tshwane MM,6,2025/02/04,NAT-WGS-25-0090,NAT-WGS-25-0090,Daspoort Wastewater Treatment Works
+Gauteng,Johannesburg MM,6,2025/02/04,NAT-WGS-25-0091,NAT-WGS-25-0091,Northern Wastewater Treatment Works (GP)
+Gauteng,Tshwane MM,5,2025/01/29,NAT-WGS-25-0092,NAT-WGS-25-0092,Rooiwal Wastewater Treatment Works
+Gauteng,Ekurhuleni MM,6,2025/02/04,NAT-WGS-25-0093,NAT-WGS-25-0093,Hartebeesfontein Waterworks
+Gauteng,Johannesburg MM,6,2025/02/05,NAT-WGS-25-0094,NAT-WGS-25-0094,Goudkoppies Wastewater Treatment Works
+Gauteng,Ekurhuleni MM,6,2025/02/04,NAT-WGS-25-0095,NAT-WGS-25-0095,ERWAT Vlakplaat Wastewater Treatment Works
+Western Cape,Cape Town MM,6,2025/02/04,NAT-WGS-25-0096,NAT-WGS-25-0096,Zandvleit Wastewater Treatment Works
+Mpumalanga,Ehlanzeni DM,6,2025/02/03,NAT-WGS-25-0098,NAT-WGS-25-0098,Komatipoort Sewage plant
+Mpumalanga,Ehlanzeni DM,6,2025/02/03,NAT-WGS-25-0099,NAT-WGS-25-0099,Kingstonvale
+Free State,Mangaung MM,6,2025/02/04,NAT-WGS-25-0100,NAT-WGS-25-0100,Sterkwater Wastewater Treatment Works
+Free State,Mangaung MM,6,2025/02/04,NAT-WGS-25-0101,NAT-WGS-25-0101,Bloemspruit Wastewater Treatment Works
+Limpopo,Vhembe DM,6,2025/02/04,NAT-WGS-25-0102,NAT-WGS-25-0102,Musina WWTW (in town)
+Limpopo,Vhembe DM,6,2025/02/04,NAT-WGS-25-0103,NAT-WGS-25-0103,Nancefield
+Eastern Cape,Buffalo City MM,6,2025/02/04,NAT-WGS-25-0104,NAT-WGS-25-0104,Mdantsane Wastewater Treatment Works
+Eastern Cape,Buffalo City MM,6,2025/02/04,NAT-WGS-25-0105,NAT-WGS-25-0105,East Bank Wastewater Treatment Works
+KwaZulu-Natal,Ethekwini MM,6,2025/02/04,NAT-WGS-25-0107,NAT-WGS-25-0107,Northern Wastewater Treatment Works (KZN)
+Gauteng,Ekurhuleni MM,6,2025/02/06,NAT-WGS-25-0108,NAT-WGS-25-0108,Olifantsfontein
+North West,Bojanala Platinum DM,6,2025/02/05,NAT-WGS-25-0110,NAT-WGS-25-0110,Rustenburg Wastewater Treatment Works
+Northern Cape,Frances Baard DM,6,2025/02/05,NAT-WGS-25-0111,NAT-WGS-25-0111,Homevale Kimberley
+Gauteng,Tshwane MM,6,2025/02/07,NAT-WGS-25-0112,NAT-WGS-25-0112,Daspoort Wastewater Treatment Works
+KwaZulu-Natal,Umkhanyakude DM,6,2025/02/04,NAT-WGS-25-0113,NAT-WGS-25-0113,Jozini Wastewater Treatment Plant
+Gauteng,Ekurhuleni MM,5,2025/01/30,NAT-WGS-25-0077,NAT-WGS-25-0077,Olifantsfontein
+Limpopo,Vhembe DM,5,2025/01/29,NAT-WGS-25-0083,NAT-WGS-25-0083,Nancefield
+Gauteng,Ekurhuleni MM,7,2025/02/10,NAT-WGS-25-0115,NAT-WGS-25-0115,Olifantsfontein
+Gauteng,Johannesburg MM,7,2025/02/11,NAT-WGS-25-0117,NAT-WGS-25-0117,Northern Wastewater Treatment Works (GP)
+Gauteng,Johannesburg MM,7,2025/02/12,NAT-WGS-25-0118,NAT-WGS-25-0118,Goudkoppies Wastewater Treatment Works
+Gauteng,Tshwane MM,6,2025/02/05,NAT-WGS-25-0119,NAT-WGS-25-0119,Rooiwal Wastewater Treatment Works
+Gauteng,Ekurhuleni MM,7,2025/02/11,NAT-WGS-25-0120,NAT-WGS-25-0120,ERWAT Vlakplaat Wastewater Treatment Works
+Gauteng,Ekurhuleni MM,7,2025/02/11,NAT-WGS-25-0121,NAT-WGS-25-0121,Hartebeesfontein Waterworks
+Eastern Cape,Buffalo City MM,7,2025/02/11,NAT-WGS-25-0122,NAT-WGS-25-0122,East Bank Wastewater Treatment Works
+Free State,Mangaung MM,7,2025/02/11,NAT-WGS-25-0124,NAT-WGS-25-0124,Sterkwater Wastewater Treatment Works
+Western Cape,Cape Town MM,4,2025/02/11,NAT-WGS-25-0125,NAT-WGS-25-0125,Zandvleit Wastewater Treatment Works
+Limpopo,Vhembe DM,7,2025/02/11,NAT-WGS-25-0130,NAT-WGS-25-0130,Nancefield
+Free State,Mangaung MM,7,2025/02/11,NAT-WGS-25-0132,NAT-WGS-25-0132,Bloemspruit Wastewater Treatment Works
+Gauteng,Ekurhuleni MM,7,2025/02/13,NAT-WGS-25-0133,NAT-WGS-25-0133,Olifantsfontein
+North West,Bojanala Platinum DM,7,2025/02/12,NAT-WGS-25-0134,NAT-WGS-25-0134,Boitekong
+Gauteng,Ekurhuleni MM,7,2025/02/14,NAT-WGS-25-0139,NAT-WGS-25-0139,Daspoort Wastewater Treatment Works
+Gauteng,Ekurhuleni MM,8.0,2025/02/17,NAT-WGS-25-0142,NAT-WGS-25-0142,Olifantsfontein
+Gauteng,Tshwane MM,8.0,2025/02/18,NAT-WGS-25-0143,NAT-WGS-25-0143,Daspoort Wastewater Treatment Works
+Gauteng,Johannesburg MM,8.0,2025/02/18,NAT-WGS-25-0144,NAT-WGS-25-0144,Northern Wastewater Treatment Works (GP)
+Gauteng,Johannesburg MM,8.0,2025/02/19,NAT-WGS-25-0145,NAT-WGS-25-0145,Goudkoppies Wastewater Treatment Works
+Gauteng,Ekurhuleni MM,8.0,2025/02/18,NAT-WGS-25-0146,NAT-WGS-25-0146,Hartebeesfontein Waterworks
+Free State,Mangaung MM,8.0,2025/02/18,NAT-WGS-25-0147,NAT-WGS-25-0147,Bloemspruit Wastewater Treatment Works
+KwaZulu-Natal,Ethekwini MM,8.0,2025/02/18,NAT-WGS-25-0153,NAT-WGS-25-0153,Northern Wastewater Treatment Works (KZN)
+Western Cape,Cape Town MM,8.0,2025/02/18,NAT-WGS-25-0156,NAT-WGS-25-0156,Zandvleit Wastewater Treatment Works
+Eastern Cape,Buffalo City MM,8.0,2025/02/18,NAT-WGS-25-0157,NAT-WGS-25-0157,Mdantsane Wastewater Treatment Works
+Eastern Cape,Buffalo City MM,8.0,2025/02/18,NAT-WGS-25-0158,NAT-WGS-25-0158,East Bank Wastewater Treatment Works
+North West,Bojanala Platinum DM,8.0,2025/02/19,NAT-WGS-25-0161,NAT-WGS-25-0161,Rustenburg Wastewater Treatment Works
+Gauteng,Ekurhuleni MM,9.0,2025/02/24,NAT-WGS-25-0165,NAT-WGS-25-0165,Olifantsfontein
+Gauteng,Tshwane MM,9.0,2025/02/25,NAT-WGS-25-0166,NAT-WGS-25-0166,Daspoort Wastewater Treatment Works
+Mpumalanga,Ehlanzeni DM,9.0,2025/02/24,NAT-WGS-25-0169,NAT-WGS-25-0169,Komatipoort Sewage plant
+Western Cape,Cape Town MM,9.0,2025/02/25,NAT-WGS-25-0173,NAT-WGS-25-0173,Borcherds Quarry Wastewater Treatment Works
+Western Cape,Cape Town MM,9.0,2025/02/25,NAT-WGS-25-0174,NAT-WGS-25-0174,Zandvleit Wastewater Treatment Works
+Eastern Cape,Buffalo City MM,9.0,2025/02/25,NAT-WGS-25-0176,NAT-WGS-25-0176,Mdantsane Wastewater Treatment Works
+Free State,Mangaung MM,9.0,2025/02/25,NAT-WGS-25-0177,NAT-WGS-25-0177,Bloemspruit Wastewater Treatment Works
+Gauteng,Johannesburg MM,9.0,2025/02/26,NAT-WGS-25-0178,NAT-WGS-25-0178,Goudkoppies Wastewater Treatment Works
+Gauteng,Tshwane MM,9.0,2025/02/26,NAT-WGS-25-0179,NAT-WGS-25-0179,Rooiwal Wastewater Treatment Works
+Gauteng,Ekurhuleni MM,9.0,2025/02/25,NAT-WGS-25-0180,NAT-WGS-25-0180,Hartebeesfontein Waterworks
+Gauteng,Ekurhuleni MM,9.0,2025/02/25,NAT-WGS-25-0181,NAT-WGS-25-0181,ERWAT Vlakplaat Wastewater Treatment Works
+Gauteng,Ekurhuleni MM,9.0,2025/02/27,NAT-WGS-25-0184,NAT-WGS-25-0184,Olifantsfontein
+Free State,Mangaung MM,9.0,2025/02/25,NAT-WGS-25-0185,NAT-WGS-25-0185,Sterkwater Wastewater Treatment Works
+Gauteng,Johannesburg MM,9.0,2025/02/28,NAT-WGS-25-0187,NAT-WGS-25-0187,Northern Wastewater Treatment Works (GP)
