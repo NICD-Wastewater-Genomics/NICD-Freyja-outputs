@@ -64,6 +64,7 @@ jobs:
           cat fastq_urls.txt
           python scripts/fetch_new_nicd_samples.py
           if [ $(wc -l < new_fastq_urls.txt) -eq 0 ]; then
+            gh run cancel ${{ github.run_id }}
             exit 0
           fi
 
