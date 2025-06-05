@@ -1,6 +1,4 @@
 name: Freyja pipeline
-description: |
-  https://github.com/andersen-lab/Freyja-nf
 
 on:
   schedule:
@@ -10,52 +8,9 @@ on:
 env:
   BATCH_SIZE: 100 # Paired-read files, so 50 samples per batch
 
+
 jobs:
-  check_new_data:
-    runs-on: ubuntu-latest
-
-    permissions:
-      contents: 'write'
-      id-token: 'write'
-
-    steps:
-      - name: Checkout origin/data-dump
-        uses: actions/checkout@v4
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          ref: data-dump
-
-      - id: 'auth'
-        name: 'Authenticate with gcloud'
-        uses: 'google-github-actions/auth@v2'
-        with:
-          project_id: 'andersen-lab-primary'
-          workload_identity_provider: 'projects/12767718289/locations/global/workloadIdentityPools/nicd-freyja-outputs/providers/nicd-freyja-outputs'
-
-      - name: 'Set up gcloud SDK'
-        uses: 'google-github-actions/setup-gcloud@v2'
-        with:
-          version: '>= 363.0.0'
-
-      - name: Set up python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.10'
-    
-      - name: List samples to run
-        id: list_samples
-        run: |
-          gcloud storage ls -r gs://modjadji-genomics/NICD-WW/fastqs > fastq_urls.txt
-          cat fastq_urls.txt
-          python scripts/fetch_new_nicd_samples.py
-          if [ $(wc -l < new_fastq_urls.txt) -eq 0 ]; then
-            exit 1
-          else
-            exit 0
-          fi
-
   process_samples:
-    needs: check_new_data
     runs-on: ubuntu-latest
     
     permissions:
@@ -85,8 +40,8 @@ jobs:
         name: 'Authenticate with gcloud'
         uses: 'google-github-actions/auth@v2'
         with:
-          project_id: 'andersen-lab-primary'
-          workload_identity_provider: 'projects/12767718289/locations/global/workloadIdentityPools/nicd-freyja-outputs/providers/nicd-freyja-outputs'
+          workload_identity_provider: 'projects/12767718289/locations/global/workloadIdentityPools/nicd-github/providers/nicd-freyja-provider'
+          service_account: 'nicd-freyja-outputs@andersen-lab-primary.iam.gserviceaccount.com'
 
       - name: 'Set up gcloud SDK'
         uses: 'google-github-actions/setup-gcloud@v2'
@@ -106,6 +61,7 @@ jobs:
         run: |
           gcloud storage ls -r gs://modjadji-genomics/NICD-WW/fastqs > fastq_urls.txt
           python scripts/fetch_new_nicd_samples.py
+          cat new_fastq_urls.txt
 
       - name: Fetch fastqs
         run: |
