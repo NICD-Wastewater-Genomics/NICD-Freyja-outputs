@@ -85,8 +85,8 @@ jobs:
         name: 'Authenticate with gcloud'
         uses: 'google-github-actions/auth@v2'
         with:
-          project_id: 'andersen-lab-primary'
           workload_identity_provider: 'projects/12767718289/locations/global/workloadIdentityPools/nicd-freyja-outputs/providers/nicd-freyja-outputs'
+          service_account: 'nicd-freyja-outputs@andersen-lab-primary.iam.gserviceaccount.com'
 
       - name: 'Set up gcloud SDK'
         uses: 'google-github-actions/setup-gcloud@v2'
