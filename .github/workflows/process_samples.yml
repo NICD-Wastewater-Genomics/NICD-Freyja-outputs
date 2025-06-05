@@ -1,6 +1,4 @@
 name: Freyja pipeline
-description: |
-  https://github.com/andersen-lab/Freyja-nf
 
 on:
   schedule:
@@ -9,7 +7,7 @@ on:
     
 env:
   BATCH_SIZE: 100 # Paired-read files, so 50 samples per batch
-  GH_TOKEN: ${ secrets.GITHUB_TOKEN }
+
 
 jobs:
   process_samples:
@@ -64,10 +62,6 @@ jobs:
           gcloud storage ls -r gs://modjadji-genomics/NICD-WW/fastqs > fastq_urls.txt
           cat fastq_urls.txt
           python scripts/fetch_new_nicd_samples.py
-          if [ $(wc -l < new_fastq_urls.txt) -eq 0 ]; then
-            gh run cancel ${{ github.run_id }}
-            exit 0
-          fi
 
       - name: Fetch fastqs
         run: |
