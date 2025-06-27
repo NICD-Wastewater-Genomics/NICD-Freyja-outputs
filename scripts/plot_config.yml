@@ -1,22 +1,28 @@
 # Configuration file for plotting colors, with inheritance shown with similar colors. 
-BA.3.2.X:
-  name: "BA.3.2.X"
+# BA.3.2.X:
+#   name: "BA.3.2.X"
+#   members:
+#     - "BA.3.2*"
+#   color: "#00008B"
+
+NB.1.8.1.X:
+  name: "NB.1.8.1.X"
   members:
-    - "BA.3.2*"
+    - "NB.1.8.1*"
+  color: "#b03a2e"
+
+XFG.X:
+  name: "XFG.X"
+  members:
+    - "XFG*"
   color: "#00008B"
 
-LP.8.X:
-  name: "LP.8.X"
+LP.8.1.X:
+  name: "LP.8.1.X"
   members:
-    - "LP.8*"
+    - "LP.8.1*"
   parent: "KP.1.X"
-
-XEC.9.X:
-  name: "XEC.9.X"
-  members:
-    - "XEC.9*"
-  parent: "XEC.X"
-
+  
 XEC.X:
   name: "XEC.X"
   members:
@@ -39,12 +45,6 @@ KP.3.X:
   name: "KP.3.X"
   members:
     - "KP.3*"
-  parent: "BA.2.86.X"
-
-KP.2.X:
-  name: "KP.2.X"
-  members:
-    - "KP.2*"
   parent: "BA.2.86.X"
 
 KP.1.X:

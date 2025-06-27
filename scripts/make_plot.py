@@ -166,6 +166,7 @@ df2.to_csv('aggregated_dated.csv')
 ### in case of round off error, we'll add the leftover bits to Other. 
 if df_abundances[df_abundances.sum(axis=1)>1.01].shape[0]>0:
     print("Error on samples from dates:",df_abundances[df_abundances.sum(axis=1)>1.01].index)
+    # print(df_abundances[df_abundances.sum(axis=1)>1.01].sum(axis=1))
     df_abundances = df_abundances[df_abundances.sum(axis=1)<1.01]
 df_abundances['Other'] += 1.- df_abundances.sum(axis=1)
 ### now prepare the plot. 
