@@ -5,6 +5,7 @@ name: Data integration
 on:
   # schedule:
   #   - cron: '0 0 * * *'
+  workflow_dispatch:
   push:
     branches: [ "main" ]
     paths: [".github/workflows/remake_plots.yml","scripts/plot_config.yml", sample_metadata.csv','agg_demixed.tsv']
