@@ -1,9 +1,9 @@
 # Configuration file for plotting colors, with inheritance shown with similar colors. 
-# BA.3.2.X:
-#   name: "BA.3.2.X"
-#   members:
-#     - "BA.3.2*"
-#   color: "#00008B"
+BA.3.2.X:
+   name: "BA.3.2.X"
+   members:
+     - "BA.3.2*"
+   color: "#3bc3e0"
 
 NB.1.8.1.X:
   name: "NB.1.8.1.X"
