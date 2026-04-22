@@ -73,7 +73,7 @@ jobs:
 
       - name: Run pipeline on new samples
         run: |
-          nextflow run https://github.com/andersen-lab/Freyja-nf -profile docker --fastq_dir fastq --output freyja_nf_outputs
+          nextflow run https://github.com/NICD-Wastewater-Genomics/NICD-Freyja-nf -r main -profile docker --fastq_dir fastq --output freyja_nf_outputs
           BG_PID=$!
           wait $BG_PID
 
